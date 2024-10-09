@@ -1,0 +1,220 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #353535;
+    color: #ffffff;
+    font-family: 'Beaufort for LOL';
+}
+
+h1 {
+    text-align: center;
+    font-size: 50pt;
+    margin-top: 50px;
+    background: linear-gradient(to right, #785A28, #C89B3C); /* Degradado */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(145, 123, 0, 0.555);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(145, 123, 0, 0.555);
+    text-decoration: underline;
+}
+
+.card>img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fighter {
+    background-image: url("../assets/images/Fighter_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.mage {
+    background-image: url("../assets/images/Mage_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.support {
+    background-image: url("../assets/images/Support_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.marksman {
+    background-image: url("../assets/images/Marksman_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.tank {
+    background-image: url("../assets/images/Tank_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.assassin {
+    background-image: url("../assets/images/Assassin_icon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    padding: 20px;
+    border: 1px solid rgba(145, 123, 0, 0.555);
+    width: 30%;
+    border-radius: 10px;
+    transform: translateY(200%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal.show .modal-content {
+    transform: translateY(-15%); /* Posición final cuando se muestra el modal */
+}
+
+.modal.hide .modal-content {
+    transform: translateY(200%); /* Posición fuera de la pantalla al ocultar */
+}
+
+.modal-close {
+    color: #aaaaaa;
+    font-weight: bold;
+    float: right;
+    background-color: #202020;
+    border: 1px solid rgba(145, 123, 0, 0.555);
+    border-radius: 3px;
+    height: 50%;
+}
+
+.modal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: rgba(145, 123, 0, 0.555);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-tags {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid rgba(145, 123, 0, 0.555);
+}
+
+.modal-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.modal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
